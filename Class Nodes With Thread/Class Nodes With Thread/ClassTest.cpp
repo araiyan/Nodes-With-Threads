@@ -40,8 +40,8 @@ void Test::insertNode(double num)
     else
     {
         newNode->value = num;
-        newNode->nextNode = nullptr;
-        nodePtr = newNode;
+        newNode->nextNode = head;
+        head = newNode;
     }
 }
 

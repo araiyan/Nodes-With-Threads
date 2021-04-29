@@ -8,7 +8,7 @@ int main()
     const int NODE_SIZE = 6;
     double userValue;
 
-    for (int i = 0; i < NODE_SIZE; i++)
+    for (int i = 1; i < NODE_SIZE; i++)
     {
         std::cout << "Enter your #" << i << " value: ";
         std::cin >> userValue;
