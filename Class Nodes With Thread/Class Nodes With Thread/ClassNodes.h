@@ -6,8 +6,8 @@ class Test
 private:
     struct Node
     {
-        double num;
-        Node *nextNode;
+        double value;
+        Node *nextNode = nullptr;
     };
 
     Node* head = nullptr;
