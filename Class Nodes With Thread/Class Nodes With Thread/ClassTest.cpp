@@ -2,19 +2,6 @@
 #include <iostream>
 
 //
-// Test constructor
-//
-Test::Test(double num)
-{
-    Node* node = new Node;
-    
-    node->nextNode = nullptr;
-    node->value = num;
-
-    head = node;
-}
-
-//
 // Inserts a node on a list depending on the value passed into the function
 //
 void Test::insertNode(double num)
@@ -87,9 +74,26 @@ void Test::showAllNodes() const
 
     while (nodePtr)
     {
-        std::cout << nodePtr->value << ", ";
+        std::cout << nodePtr->value;
         nodePtr = nodePtr->nextNode;
+        if (nodePtr)
+            std::cout << ", ";
     }
+
+    std::cout << std::endl;
+}
+
+//
+// Shows a specific index of the node
+//
+void Test::showNode(int index) const
+{
+    Node* nodePtr = head;
+
+    for (int i = 0; (i < index) && nodePtr; i++)
+        nodePtr = nodePtr->nextNode;
+
+    std::cout << "Node " << index + 1 << nodePtr->value << std::endl;
 }
 
 //

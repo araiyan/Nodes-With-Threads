@@ -13,10 +13,9 @@ private:
     Node* head = nullptr;
 
 public:
-    Test(double num);
     void insertNode(double num);
     void deleteNode(double num);
-    void showList(int index) const;
+    void showNode(int index) const;
     void showAllNodes() const;
 
     // destructor
